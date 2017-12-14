@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		484E528E1FE046BE004C684C /* HomeDatasourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484E528D1FE046BE004C684C /* HomeDatasourceController.swift */; };
-		484E52931FE04BD4004C684C /* CustomCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484E52921FE04BD4004C684C /* CustomCells.swift */; };
+		484E52931FE04BD4004C684C /* UserHeaderFooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484E52921FE04BD4004C684C /* UserHeaderFooterCell.swift */; };
 		484E52951FE04C21004C684C /* HomeDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484E52941FE04C21004C684C /* HomeDatasource.swift */; };
+		484E52971FE2F4F3004C684C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484E52961FE2F4F3004C684C /* User.swift */; };
+		484E529B1FE2F8CF004C684C /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484E529A1FE2F8CF004C684C /* UserCell.swift */; };
 		48C5F5D01FDEEA7400B1629D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C5F5CF1FDEEA7400B1629D /* AppDelegate.swift */; };
 		48C5F5D71FDEEA7400B1629D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48C5F5D61FDEEA7400B1629D /* Assets.xcassets */; };
 		48C5F5DA1FDEEA7400B1629D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48C5F5D81FDEEA7400B1629D /* LaunchScreen.storyboard */; };
@@ -20,8 +22,10 @@
 /* Begin PBXFileReference section */
 		0CA9D1D901F959F615EFD4C4 /* Pods_TweetIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TweetIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		484E528D1FE046BE004C684C /* HomeDatasourceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDatasourceController.swift; sourceTree = "<group>"; };
-		484E52921FE04BD4004C684C /* CustomCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCells.swift; sourceTree = "<group>"; };
+		484E52921FE04BD4004C684C /* UserHeaderFooterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHeaderFooterCell.swift; sourceTree = "<group>"; };
 		484E52941FE04C21004C684C /* HomeDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDatasource.swift; sourceTree = "<group>"; };
+		484E52961FE2F4F3004C684C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		484E529A1FE2F8CF004C684C /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		48C5F5CC1FDEEA7400B1629D /* TweetIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TweetIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48C5F5CF1FDEEA7400B1629D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48C5F5D61FDEEA7400B1629D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				484E52941FE04C21004C684C /* HomeDatasource.swift */,
+				484E52961FE2F4F3004C684C /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -64,7 +69,8 @@
 		484E52901FE04BB5004C684C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				484E52921FE04BD4004C684C /* CustomCells.swift */,
+				484E52921FE04BD4004C684C /* UserHeaderFooterCell.swift */,
+				484E529A1FE2F8CF004C684C /* UserCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -248,9 +254,11 @@
 			files = (
 				484E52951FE04C21004C684C /* HomeDatasource.swift in Sources */,
 				48C5F5D01FDEEA7400B1629D /* AppDelegate.swift in Sources */,
+				484E52971FE2F4F3004C684C /* User.swift in Sources */,
 				484E528E1FE046BE004C684C /* HomeDatasourceController.swift in Sources */,
-				484E52931FE04BD4004C684C /* CustomCells.swift in Sources */,
+				484E52931FE04BD4004C684C /* UserHeaderFooterCell.swift in Sources */,
 				48C5F5E21FDEEB2500B1629D /* HomeViewController.swift in Sources */,
+				484E529B1FE2F8CF004C684C /* UserCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
