@@ -12,6 +12,7 @@
 		484E52951FE04C21004C684C /* HomeDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484E52941FE04C21004C684C /* HomeDatasource.swift */; };
 		484E52971FE2F4F3004C684C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484E52961FE2F4F3004C684C /* User.swift */; };
 		484E529B1FE2F8CF004C684C /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484E529A1FE2F8CF004C684C /* UserCell.swift */; };
+		4858C6641FE68266004FC670 /* HomeDatasourceControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4858C6631FE68266004FC670 /* HomeDatasourceControllerExtension.swift */; };
 		48C5F5D01FDEEA7400B1629D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C5F5CF1FDEEA7400B1629D /* AppDelegate.swift */; };
 		48C5F5D71FDEEA7400B1629D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48C5F5D61FDEEA7400B1629D /* Assets.xcassets */; };
 		48C5F5DA1FDEEA7400B1629D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48C5F5D81FDEEA7400B1629D /* LaunchScreen.storyboard */; };
@@ -26,6 +27,7 @@
 		484E52941FE04C21004C684C /* HomeDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDatasource.swift; sourceTree = "<group>"; };
 		484E52961FE2F4F3004C684C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		484E529A1FE2F8CF004C684C /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		4858C6631FE68266004FC670 /* HomeDatasourceControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDatasourceControllerExtension.swift; sourceTree = "<group>"; };
 		48C5F5CC1FDEEA7400B1629D /* TweetIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TweetIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48C5F5CF1FDEEA7400B1629D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48C5F5D61FDEEA7400B1629D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -83,6 +85,14 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		4858C6621FE6824B004FC670 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4858C6631FE68266004FC670 /* HomeDatasourceControllerExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		48C5F5C31FDEEA7400B1629D = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +114,7 @@
 		48C5F5CE1FDEEA7400B1629D /* TweetIt */ = {
 			isa = PBXGroup;
 			children = (
+				4858C6621FE6824B004FC670 /* Extensions */,
 				484E52911FE04BBB004C684C /* Controller */,
 				484E52901FE04BB5004C684C /* View */,
 				484E528F1FE04BAB004C684C /* Model */,
@@ -259,6 +270,7 @@
 				484E52931FE04BD4004C684C /* UserHeaderFooterCell.swift in Sources */,
 				48C5F5E21FDEEB2500B1629D /* HomeViewController.swift in Sources */,
 				484E529B1FE2F8CF004C684C /* UserCell.swift in Sources */,
+				4858C6641FE68266004FC670 /* HomeDatasourceControllerExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
