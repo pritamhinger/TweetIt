@@ -15,7 +15,7 @@ class HomeDatasource: Datasource {
         return [myUser, brianUser]
     }()
     
-    //let words = ["user1", "user2", "user3"]
+    let tweets = ["tweet1", "tweet2"]
     
     // Setting Custom Header Class
     override func headerClasses()
@@ -30,7 +30,7 @@ class HomeDatasource: Datasource {
     
     // Setting Custom Cell Class
     override func cellClasses() -> [DatasourceCell.Type] {
-        return [HomeCell.self]
+        return [HomeCell.self, TweetCell.self]
     }
     
     // Return item at the collection at index path
@@ -40,6 +40,14 @@ class HomeDatasource: Datasource {
     
     // Returning number of items in collection
     override func numberOfItems(_ section: Int) -> Int {
+        if section == 1{
+            return tweets.count
+        }
+        
         return users.count
+    }
+    
+    override func numberOfSections() -> Int {
+        return 2
     }
 }

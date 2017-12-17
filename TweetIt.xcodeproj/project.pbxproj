@@ -17,6 +17,7 @@
 		48C5F5D71FDEEA7400B1629D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48C5F5D61FDEEA7400B1629D /* Assets.xcassets */; };
 		48C5F5DA1FDEEA7400B1629D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48C5F5D81FDEEA7400B1629D /* LaunchScreen.storyboard */; };
 		48C5F5E21FDEEB2500B1629D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C5F5E11FDEEB2500B1629D /* HomeViewController.swift */; };
+		48F864001FE69A5A001D5554 /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F863FF1FE69A5A001D5554 /* TweetCell.swift */; };
 		72A7E5698FC3FBC750B55E52 /* Pods_TweetIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CA9D1D901F959F615EFD4C4 /* Pods_TweetIt.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,7 @@
 		48C5F5D91FDEEA7400B1629D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		48C5F5DB1FDEEA7400B1629D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48C5F5E11FDEEB2500B1629D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		48F863FF1FE69A5A001D5554 /* TweetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
 		769CB278280BCF0738A392A2 /* Pods-TweetIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TweetIt.release.xcconfig"; path = "Pods/Target Support Files/Pods-TweetIt/Pods-TweetIt.release.xcconfig"; sourceTree = "<group>"; };
 		B70D47266A5DA14819631FC9 /* Pods-TweetIt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TweetIt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TweetIt/Pods-TweetIt.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +75,7 @@
 			children = (
 				484E52921FE04BD4004C684C /* UserHeaderFooterCell.swift */,
 				484E529A1FE2F8CF004C684C /* UserCell.swift */,
+				48F863FF1FE69A5A001D5554 /* TweetCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				484E52951FE04C21004C684C /* HomeDatasource.swift in Sources */,
 				48C5F5D01FDEEA7400B1629D /* AppDelegate.swift in Sources */,
 				484E52971FE2F4F3004C684C /* User.swift in Sources */,
+				48F864001FE69A5A001D5554 /* TweetCell.swift in Sources */,
 				484E528E1FE046BE004C684C /* HomeDatasourceController.swift in Sources */,
 				484E52931FE04BD4004C684C /* UserHeaderFooterCell.swift in Sources */,
 				48C5F5E21FDEEB2500B1629D /* HomeViewController.swift in Sources */,
