@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0910"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5F470413BFD3B82C0AAA9DE685B7EDF7"
+               BlueprintIdentifier = "0168E13A697082938D1A4D000FEBB9C4"
                BuildableName = "Pods_TweetIt.framework"
                BlueprintName = "Pods-TweetIt"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5F470413BFD3B82C0AAA9DE685B7EDF7"
+            BlueprintIdentifier = "0168E13A697082938D1A4D000FEBB9C4"
             BuildableName = "Pods_TweetIt.framework"
             BlueprintName = "Pods-TweetIt"
             ReferencedContainer = "container:Pods.xcodeproj">

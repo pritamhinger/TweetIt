@@ -7,4 +7,5 @@ target 'TweetIt' do
 
   # Pods for TweetIt
   pod 'LBTAComponents', '1.0.1'
+  pod 'TRON', '~> 4.0'
 end

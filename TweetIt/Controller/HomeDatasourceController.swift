@@ -9,16 +9,37 @@
 import UIKit
 import Foundation
 import LBTAComponents
+import TRON
+import SwiftyJSON
 
 class HomeDatasourceController: DatasourceController {
     
     let frame = CGRect(x: 0, y: 0, width: 34, height: 34)
+    let tron = TRON(baseURL: "https://api.letsbuildthatapp.com")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView?.backgroundColor = UIColor(r: 232, g: 236, b: 241)
-        self.datasource = HomeDatasource()
+        //self.datasource = HomeDatasource()
         setUpNavigationBarItems()
+        fetchTweetsAndUserFeed();
+    }
+    
+    
+    class JSONError: JSONDecodable{
+        required init(json: JSON) throws {
+            print("Error parsing JSON", json)
+        }
+    }
+    
+    fileprivate func fetchTweetsAndUserFeed(){
+        let request: APIRequest<HomeDatasource, JSONError> = tron.swiftyJSON.request("twitter/home")
+        request.perform(withSuccess: {homeDatasource in
+            print("JSON parsing is Sucess. User Count is \(homeDatasource.users.count)")
+            self.datasource = homeDatasource
+        }, failure: {err in
+            print("error occured", err)
+        })
     }
     
     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {

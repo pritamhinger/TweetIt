@@ -7,13 +7,27 @@
 //
 
 import LBTAComponents
+import TRON
+import SwiftyJSON
 
-class HomeDatasource: Datasource {
-    let users: [User] = {
-        let myUser = User(name: "Pritam Hinger", username: "@pritamhinger", bioText: "An ios developer by passion. Contact to get a beautifully hand crafted app for your business house. Write us at artist@appdevelapp.com or tweet us @pritamhinger", profileImage: #imageLiteral(resourceName: "profile_picture"))
-        let brianUser = User(name: "Brain Voong", username: "@buildthatapp", bioText: "iPhone, iPad, iOS Programming Community. Join us to learn Swift, Objective-C and build iOS apps!", profileImage: #imageLiteral(resourceName: "icons8-twitter"))
-        return [myUser, brianUser]
-    }()
+class HomeDatasource: Datasource, JSONDecodable {
+    
+    var users: [User]
+    required init(json: JSON) throws {
+        let usersArray = json["users"].array
+        users = []
+        
+        guard let usersJSON = usersArray else { return }
+        
+        for userJSON in usersJSON {
+            let name = userJSON["name"].stringValue
+            let username = userJSON["username"].stringValue
+            let bio = userJSON["bio"].stringValue
+            
+            let user = User(name: name, username: username, bioText: bio, profileImage: UIImage())
+            self.users.append(user)
+        }
+    }
     
     let tweets: [Tweet] = {
         let myUser = User(name: "Pritam Hinger", username: "@pritamhinger", bioText: "An ios developer by passion. Contact to get a beautifully hand crafted app for your business house. Write us at artist@appdevelapp.com or tweet us @pritamhinger", profileImage: #imageLiteral(resourceName: "profile_picture"))
