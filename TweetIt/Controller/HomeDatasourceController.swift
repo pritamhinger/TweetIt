@@ -20,6 +20,7 @@ class HomeDatasourceController: DatasourceController {
         super.viewDidLoad()
         collectionView?.backgroundColor = UIColor(r: 232, g: 236, b: 241)    
         setUpNavigationBarItems()
+        
         TweetService.sharedInstance.getHomeDate(onCompletion: {homeDataSource in
             self.datasource = homeDataSource
         })
