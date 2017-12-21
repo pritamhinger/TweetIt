@@ -15,30 +15,13 @@ import SwiftyJSON
 class HomeDatasourceController: DatasourceController {
     
     let frame = CGRect(x: 0, y: 0, width: 34, height: 34)
-    let tron = TRON(baseURL: "https://api.letsbuildthatapp.com")
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView?.backgroundColor = UIColor(r: 232, g: 236, b: 241)
-        //self.datasource = HomeDatasource()
+        collectionView?.backgroundColor = UIColor(r: 232, g: 236, b: 241)    
         setUpNavigationBarItems()
-        fetchTweetsAndUserFeed();
-    }
-    
-    
-    class JSONError: JSONDecodable{
-        required init(json: JSON) throws {
-            print("Error parsing JSON", json)
-        }
-    }
-    
-    fileprivate func fetchTweetsAndUserFeed(){
-        let request: APIRequest<HomeDatasource, JSONError> = tron.swiftyJSON.request("twitter/home")
-        request.perform(withSuccess: {homeDatasource in
-            print("JSON parsing is Sucess. User Count is \(homeDatasource.users.count)")
-            self.datasource = homeDatasource
-        }, failure: {err in
-            print("error occured", err)
+        TweetService.sharedInstance.getHomeDate(onCompletion: {homeDataSource in
+            self.datasource = homeDataSource
         })
     }
     
@@ -52,7 +35,6 @@ class HomeDatasourceController: DatasourceController {
     override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         if let user = self.datasource?.item(indexPath) as? User {
-            print(user.bioText)
             // - 12 - 50 - 12 = -74
             let approximateWidthOfBioTextView = view.frame.width - 76
             let size = CGSize(width: approximateWidthOfBioTextView, height: 1000)
