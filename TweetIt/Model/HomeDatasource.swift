@@ -21,8 +21,8 @@ class HomeDatasource: Datasource, JSONDecodable {
             throw NSError(domain: "com.appdevelapp", code: 1, userInfo: [NSLocalizedDescriptionKey : "'users' json is invalid"])
         }
         
-        self.usersIntance = usersJSON.map{User(json: $0)}
-        self.tweetsInstance = tweetsJSON.map{Tweet(json: $0)}
+        self.usersIntance = try usersJSON.decode()
+        self.tweetsInstance = try tweetsJSON.decode()
     }
     
     // Setting Custom Header Class
