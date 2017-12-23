@@ -16,18 +16,18 @@ struct TweetService {
     
     static let sharedInstance = TweetService()
     
-    func getHomeDate(onCompletion: @escaping (HomeDatasource) -> ()) {
+    func getHomeDate(onCompletion: @escaping (HomeDatasource?, Error?) -> ()) {
         let request: APIRequest<HomeDatasource, JSONError> = tron.swiftyJSON.request("twitter/home")
         request.perform(withSuccess: {homeDatasource in
-            onCompletion(homeDatasource)
+            onCompletion(homeDatasource, nil)
         }, failure: {err in
-            print("error occured", err)
+            onCompletion(nil, err)
         })
     }
     
     class JSONError: JSONDecodable{
         required init(json: JSON) throws {
-            print("Error parsing JSON", json)
+            
         }
     }
 }

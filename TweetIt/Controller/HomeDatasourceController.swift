@@ -16,13 +16,38 @@ class HomeDatasourceController: DatasourceController {
     
     let frame = CGRect(x: 0, y: 0, width: 34, height: 34)
     
+    let errorMessageLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Something went wrong. Please try again after some time...!!"
+        label.textAlignment = .center
+        label.numberOfLines = 0
+        label.isHidden = true
+        return label
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        view.addSubview(errorMessageLabel)
+        errorMessageLabel.fillSuperview()
+        
         collectionView?.backgroundColor = UIColor(r: 232, g: 236, b: 241)    
         setUpNavigationBarItems()
         
-        TweetService.sharedInstance.getHomeDate(onCompletion: {homeDataSource in
-            self.datasource = homeDataSource
+        TweetService.sharedInstance.getHomeDate(onCompletion: {(homeDatasource, err) -> Void in
+            if let err = err{
+                self.errorMessageLabel.isHidden = false
+                
+                if let apiError = err as? APIError<TweetService.JSONError>{
+                    if apiError.response?.statusCode != 200{
+                        self.errorMessageLabel.text = "Reposnse Status code is not 200"
+                    }
+                }
+                
+                return
+            }
+            
+            self.datasource = homeDatasource
         })
     }
     
