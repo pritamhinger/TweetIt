@@ -13,15 +13,15 @@ class HomeCell: DatasourceCell {
     override var datasourceItem: Any?{
         didSet{
             guard let user = datasourceItem as? User else { return }
-            profileImageView.image = user.profileImage
             nameLabel.text = user.name
             usernameLabel.text = user.username
             bioTextView.text = user.bioText
+            profileImageView.loadImage(urlString: user.profileImageURL)
         }
     }
     
-    let profileImageView : UIImageView = {
-        let imageView = UIImageView()
+    let profileImageView : CachedImageView = {
+        let imageView = CachedImageView()
         imageView.image = #imageLiteral(resourceName: "profile_picture")
         imageView.layer.cornerRadius = 5.0
         imageView.clipsToBounds = true

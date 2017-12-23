@@ -27,6 +27,7 @@ class TweetCell: DatasourceCell {
             
             attributedText.addAttribute(NSAttributedStringKey.paragraphStyle, value: paragraphStyle, range: range)
             messageTextView.attributedText = attributedText
+            profileImageView.loadImage(urlString: tweet.user.profileImageURL)
         }
     }
     
@@ -37,8 +38,8 @@ class TweetCell: DatasourceCell {
         return textView
     }()
     
-    let profileImageView : UIImageView = {
-        let imageView = UIImageView()
+    let profileImageView : CachedImageView = {
+        let imageView = CachedImageView()
         imageView.image = #imageLiteral(resourceName: "profile_picture")
         imageView.layer.cornerRadius = 5.0
         imageView.clipsToBounds = true
